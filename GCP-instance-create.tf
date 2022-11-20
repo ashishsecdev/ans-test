@@ -2,7 +2,7 @@ data "template_file" "script_file" {
   template = file("m_test.sh")
   vars = {
     eip1 = google_compute_instance.node1.network_interface.0.access_config.0.nat_ip
-    eip2 = google_compute_instance.node1.network_interface.0.access_config.0.nat_ip
+    eip2 = google_compute_instance.node2.network_interface.0.access_config.0.nat_ip
   }
 }
 
